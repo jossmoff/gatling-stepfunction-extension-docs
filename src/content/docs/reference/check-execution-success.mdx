@@ -1,0 +1,60 @@
+---
+title: Check Execution Success
+description: A reference page to how to start StepFunction Executions
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Card } from '@astrojs/starlight/components';
+
+TODO: More interesting intro on checking that the executions have succeeded.
+
+## Check Succeeds
+
+
+<Tabs>
+	<TabItem label="Standard">
+		```scala
+	    // Start the exectuion
+		.pause(someAmmountOfTime)
+        .exec(
+            sfn("Check item-batch-processor execution completion").checkSucceeded
+        )
+		```
+	</TabItem>
+	<TabItem label="Express (sync)">
+	    <Card title="Sorry :(" icon="error">
+		    Not yet supported. Planned for v1.5.0
+	    </Card>
+	</TabItem>
+	<TabItem label="Express (aysnc)">
+        <Card title="Sorry :(" icon="error">
+		    Not yet supported. Planned for v1.4.0
+	    </Card>
+	</TabItem>
+</Tabs>
+
+## Check State Succeeded
+TODO: Introduction to what checking up to a state does
+TODO: Explain about state type and link to
+<Tabs>
+	<TabItem label="Standard">
+		```scala
+	    // Start the exectuion
+		.pause(someAmmountOfTime)
+        .exec(
+            sfn("Check item-batch-processor execution completion").checkStateSucceeded
+            .stateName("NameOfStateSucceeded")
+            .stateType(LAMBDA_FUNCTION_SUCCEEDED)
+        )
+		```
+	</TabItem>
+	<TabItem label="Express (sync)">
+	    <Card title="Sorry :(" icon="error">
+		    Not yet supported. Planned for v1.5.0
+	    </Card>
+	</TabItem>
+	<TabItem label="Express (aysnc)">
+        <Card title="Sorry :(" icon="error">
+		    Not yet supported. Planned for v1.4.0
+	    </Card>
+	</TabItem>
+</Tabs>
