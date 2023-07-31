@@ -17,17 +17,17 @@ export default defineConfig({
 					label: 'Getting Started',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Installation', link: '/getting-started/installation/' },
-						{ label: 'Quickstart', link: '/getting-started/quickstart/' },
+						{ label: 'Installation', link: '/getting-started/installation' },
+						{ label: 'Quickstart', link: '/getting-started/quickstart' },
 					],
 				},
 				{
 					label: 'Reference',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Standard vs. Express Workflows', link: '/reference/standard-vs-express/' },
-						{ label: 'Start Executions', link: '/reference/start-executions/' },
-						{ label: 'Check Execution Success', link: '/reference/check-execution-success/' },
+						{ label: 'Standard vs. Express Workflows', link: '/reference/standard-vs-express' },
+						{ label: 'Start Executions', link: '/reference/start-executions' },
+						{ label: 'Check Execution Success', link: '/reference/check-execution-success' },
 					]
 				},
 			],
