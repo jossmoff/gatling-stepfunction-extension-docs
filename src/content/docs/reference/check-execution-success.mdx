@@ -5,10 +5,10 @@ description: A reference page to how to start StepFunction Executions
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Card } from '@astrojs/starlight/components';
 
-TODO: More interesting intro on checking that the executions have succeeded.
+Now we can successfully start an execution, what about checking it has succesfully executed? 
 
 ## Check Succeeds
-
+The most straight forward check is to ensure that the stepfunction has successfully executed. You can do that using the following:
 
 <Tabs>
 	<TabItem label="Standard">
@@ -33,8 +33,11 @@ TODO: More interesting intro on checking that the executions have succeeded.
 </Tabs>
 
 ## Check State Succeeded
-TODO: Introduction to what checking up to a state does
-TODO: Explain about state type and link to
+Instead of checking that the whole StepFunction has executed, it might be useful only to check up to a certain state. 
+To do this, you can supply:
+
+- `stateName`: The name of the state you want to check in the state machine
+- `stateType`: The type of state you want to check in the state machine 
 <Tabs>
 	<TabItem label="Standard">
 		```scala
@@ -58,3 +61,5 @@ TODO: Explain about state type and link to
 	    </Card>
 	</TabItem>
 </Tabs>
+
+For more information on the different `stateTypes`, see [here](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sfn/model/HistoryEventType.html).
